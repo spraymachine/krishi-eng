@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing - 1</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://kit.fontawesome.com/946a87431d.js" crossorigin="anonymous"></script>
+    
+ 
+</head>
+<body>
+
+    <!-- ---------------Navigation Menu --------------- -->
+    <nav>
+      <div class="nav-header">
+          <div class="nav-logo">
+              <a href="#"><h2>Krishi Eng</h2></a>
+          </div>
+          <div class="nav-menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+          <li><a href="#header-container">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#client">Client</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </div>
+  </nav>
+
+  <!-- ---------------Header Page --------------- -->
+  <section class="header-container">
+      <div class="header-img">
+          <img src="./assets/contact.jpg" alt="header image">
+      </div>
+      <div class="header-content">
+          <h2>Krishi Civil Engineer Agency</h2> 
+          <h1>
+              Make Digital<br/><span class="h1-span-1">Product</span>
+              <span class="h1-span-2">with our Agency</span>
+           </h1>
+          <!-- <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero hic reprehenderit voluptates! Eveniet, nobis sit hic aliquam nemo ipsa tenetur deleniti dolor libero? Corrupti nihil consequuntur dolorum officia, voluptates sunt.            
+          </p> -->
+          <div class="header-btn">
+              <button class="btn">Learn more</button>
+          </div>
+          <!-- <ul class="socials">
+              <li><a href=""><i class="fa-solid fa-message"></i></a></li>
+              <li><a href=""><i class="fa-solid fa-message"></i></a></li>
+              <li><a href=""><i class="fa-solid fa-message"></i></a></li>
+          </ul>  -->
+      </div>
+  </section>
+
+  <!-- ---------------Header Page --------------- -->
+  <section class="about-us">
+    <h2 class="about-title">About Us</h2>
+  </section>
+
+  <!-- ---------------Client Page --------------- -->
+  <section id="client">
+      <div class="clients">
+          <h1>Our   Clients</h1>
+          <ol class = client-list>
+              <li class="client-card card-up">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+              <li class="client-card card-up">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+              <li class="client-card card-up">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+              <li class="client-card card-down">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+              <li class="client-card card-down">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+              <li class="client-card card-down">
+                  <!-- <div class="icon"><i class='fas fa-user'></i></div> -->
+                  <div class="title">Client</div>
+                  <div class="description">Some Description about the client</div>
+              </li>
+          </ol>
+      </div>
+      
+  </section>
+
+  <!-- ---------------Contact Page --------------- -->
+  <section id="contact">
+  
+        <h1 class="section-header">Contact</h1>
+        
+        <div class="contact-wrapper">
+        
+        <!-- Left contact page --> 
+          
+          <form id="contact-form" class="form-horizontal" role="form">
+             
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+              </div>
+            </div>
+      
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+            
+            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+              <div class="alt-send-button">
+                <i class="fas fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+            
+            </button>
+            
+          </form>
+          
+        <!-- Right contact page --> 
+          
+            <div class="direct-contact-container">
+      
+              <ul class="contact-list">
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+                
+                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                
+                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                
+              </ul>
+      
+              <hr>
+              <ul class="social-media-list">
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>       
+              </ul>
+              <hr>
+      
+              <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+      
+            </div>
+          
+        </div>
+        
+  </section>  
+        
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+      <script src="./script.js"></script> 
+    </body>
+</html>
