@@ -45,10 +45,9 @@ nav {
     justify-content: space-between;
     background-color: var(--primary-color);
 }
-.nav-logo a h2{
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: var(--primary-color);
+.nav-logo img{
+    width: 100px;
+    height: 100px;
 }
 .nav-menu-btn{
   font-size: 1.5rem;
