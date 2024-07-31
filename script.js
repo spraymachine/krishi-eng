@@ -49,6 +49,11 @@ const scrollRevealOption = {
     delay: 3000,
   });
 
+  ScrollReveal().reveal("#main-client", {
+    ...scrollRevealOption,
+    delay: 1000,
+  });
+
   document.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     e.target.elements.name.value = '';
