@@ -28,6 +28,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     font: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 nav {
     position: fixed;
@@ -48,7 +49,9 @@ nav {
 .nav-logo img{
     width: 70px;
     height: 70px;
+    color: white;
 }
+
 .nav-menu-btn{
   font-size: 1.5rem;
   color: white;
@@ -183,6 +186,7 @@ nav {
     color: var(--text-light);
 }
 @media (width > 821px){
+ 
     nav{
         position: static;
         padding: 2rem 1rem;
@@ -234,6 +238,10 @@ nav {
     .header-btn{
       align-self: center;
     }
+    .nav-logo img{
+      height: 80px;
+      width: 80px;
+    }
 }
 
 /* -------------------------About Us-------------------------- */
@@ -267,7 +275,7 @@ nav {
 }
 .about-left{
   /* width: 50%; */
-  text-align: center;
+  
  padding-left: 4rem;
 }
 
@@ -279,6 +287,7 @@ nav {
   font-size: 1.05rem;
   margin: 15px 0 30px 0;
   color: var(--primary-color);
+  
 }
 .about-right img{
   max-width: 400px;
@@ -287,13 +296,15 @@ nav {
 }
 
 .proof{
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .proof h2{
+  text-align: center;
   font-size: 26px;
   color: var(--primary-color);
 }
@@ -318,9 +329,23 @@ nav {
   .about-us{
     max-height: fit-content;
   }
+  /* .about-title{
+    font-size: ;
+  } */
   .about-right img{
     width: auto;
     height: 250px;
+  }
+  .svg{
+    height: 200px;
+    width: fit-content;
+   
+  }
+}
+@media (width < 600px){
+  .about-left .about-title{
+    font-size: 2.5rem;
+    font-weight: 700;
   }
 }
 
