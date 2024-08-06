@@ -313,6 +313,9 @@ nav {
   .about-left{
     margin-right: 20px;
   }
+  .about-us{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 14%, rgba(255,255,255,1) 94%, rgba(0,165,221,1) 100%);
+  }
 }
 
 @media (width < 800px){
@@ -343,13 +346,9 @@ nav {
    
   }
 }
-@media (width < 600px){
-  .about-left .about-title{
-    font-size: 2.5rem;
-    font-weight: 700;
-  }
+
  
-}
+
 
 /* -------------------------Clients-------------------------- */
 .clients{
@@ -438,6 +437,16 @@ nav {
 /* .client-card .description { font-size: 1.4rem; font-weight: 500; color: var(--primary-color); text-align: center; } */
 
 
+@media (width < 400px){
+  .client-card::before{
+    content: counter(stepnr);
+    color: var(--accent-color);
+    padding-left: 7rem;
+    font-size: 12rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+}
 /* -----------------------------Contact-------------------------- */
 
 #contact {
