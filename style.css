@@ -248,7 +248,7 @@ nav {
 .about-us{
   height: 100%;
   background-color: var(--white);
- 
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(0,165,221,1) 100%);
 }
 
 .about-title{
@@ -328,6 +328,7 @@ nav {
   }
   .about-us{
     max-height: fit-content;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(0,165,221,1) 100%);
   }
   /* .about-title{
     font-size: ;
@@ -347,6 +348,7 @@ nav {
     font-size: 2.5rem;
     font-weight: 700;
   }
+ 
 }
 
 /* -------------------------Clients-------------------------- */
