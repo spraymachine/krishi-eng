@@ -319,6 +319,9 @@ nav {
 }
 
 @media (width < 800px){
+  .about-left .proof{
+    text-align: center;
+  }
   .about-container{
     display: flex;
     flex-direction: column;
@@ -327,10 +330,10 @@ nav {
     margin-top: 3rem;
   }
   .about-left p{
-    margin: .8rem 0 3rem;
+    margin: 3rem;
   }
   .about-us{
-    max-height: fit-content;
+    /* max-height: fit-content; */
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(0,165,221,1) 100%);
   }
   /* .about-title{
@@ -342,7 +345,7 @@ nav {
   }
   .svg{
     height: 200px;
-    width: fit-content;
+    width: auto;
    
   }
 }
@@ -441,7 +444,7 @@ nav {
   .client-card::before{
     content: counter(stepnr);
     color: var(--accent-color);
-    padding-left: 10rem;
+    padding-left: 8.85rem;
     font-size: 12rem;
     font-weight: 700;
     overflow: hidden;
