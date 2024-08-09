@@ -437,7 +437,7 @@ nav {
 /* .client-card .description { font-size: 1.4rem; font-weight: 500; color: var(--primary-color); text-align: center; } */
 
 
-@media (width < 400px){
+/* @media (width < 400px){
   .client-card::before{
     content: counter(stepnr);
     color: var(--accent-color);
@@ -445,7 +445,7 @@ nav {
     font-size: 10rem;
     font-weight: 700;
     overflow: hidden;
-}
+} 
 }
 /* -----------------------------Contact-------------------------- */
 
