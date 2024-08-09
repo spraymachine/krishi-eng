@@ -14,6 +14,7 @@
     --text-light: #d1d5db;
     --white: #ffffff; 
     --max-width: 1200px; 
+    --font: 'Raleway', serif;
 }
 
 a{ 
@@ -27,7 +28,7 @@ body{
     /* background-image:  linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ),url(./assets/bg-2.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
-    font: 'Raleway', sans-serif;
+    font: var(--font);
     overflow-x: hidden;
 }
 nav {
@@ -110,7 +111,7 @@ nav {
     margin-left: auto;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     color:  var(--primary-color);
     text-align: left;
 }
@@ -125,8 +126,9 @@ nav {
     background-color: var(--secondary-color);
 }
 .header-content h1{
+    font-family: var(--font);
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 400;
     color: #3d3f4c;
     line-height: 5rem;
 }
@@ -147,6 +149,7 @@ nav {
     font-weight: 400;
 }
 .header-content .btn{
+  font-family: var(--font);
     padding: 0.75rem 1.5rem;
     outline: none;
     border: none;
@@ -164,6 +167,9 @@ nav {
     background-color: var(--white);
     font-weight: 600;
     transform: translateY(-10%);
+}
+.btn a:hover{
+  color: #000;
 }
 
 /* .socials{
@@ -184,6 +190,10 @@ nav {
 .header-bar{
     font-size: 0.9rem;
     color: var(--text-light);
+}
+
+.btn a{
+  color: #FFF;
 }
 @media (width > 821px){
  
@@ -246,15 +256,17 @@ nav {
 
 /* -------------------------About Us-------------------------- */
 .about-us{
+  
   height: 100%;
   background-color: var(--white);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 82%, rgba(0,165,221,1) 100%);
 }
 
 .about-title{
+  font: var(--font);
   text-align: center;
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--secondary-color);
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -283,7 +295,7 @@ nav {
   font-family: 'Raleway';
 }
 .about-left p{
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.05rem;
   margin: 15px 0 30px 0;
   color: var(--primary-color);
@@ -307,8 +319,11 @@ nav {
   text-align: center;
   font-size: 26px;
   color: var(--primary-color);
+  font-weight: 300;
 }
-
+.proof h1{
+  font-weight: 400;
+}
 @media (width<1200px){
   .about-left{
     margin-right: 20px;
@@ -319,6 +334,9 @@ nav {
 }
 
 @media (width < 800px){
+  .about-left .proof{
+    text-align: center;
+  }
   .about-container{
     display: flex;
     flex-direction: column;
@@ -327,10 +345,10 @@ nav {
     margin-top: 3rem;
   }
   .about-left p{
-    margin: .8rem 0 3rem;
+    margin: 3rem;
   }
   .about-us{
-    max-height: fit-content;
+    /* max-height: fit-content; */
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,165,221,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(0,165,221,1) 100%);
   }
   /* .about-title{
@@ -342,7 +360,7 @@ nav {
   }
   .svg{
     height: 200px;
-    width: fit-content;
+    width: auto;
    
   }
 }
@@ -362,14 +380,14 @@ nav {
     color: var(--color);
     background-color: var(--bgColor);
     border: #000 solid;
-    font: 'Raleway';
+    font: var(--font);
 
 }
-.clients h1{
+.client-title{
     text-align: center;
     font-size: 4rem;
-    font: 'Raleway', sans-serif;
-    font-weight: 500;
+    font-family: var(--font);
+    font-weight: 300;
     color: var(--secondary-color);
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -416,9 +434,9 @@ nav {
 .client-card::before{
     content: counter(stepnr);
     color: var(--accent-color);
-    padding-left: 10rem;
+    padding-left: 10.3rem;
     font-size: 11rem;
-    font-weight: 700;
+    font-weight: 200;
     overflow: hidden;
 }
 .client-card::after {
@@ -433,19 +451,19 @@ nav {
 }
 .clients .client-card> * { width: 7.5rem }
 .clients .client-card .icon { font-size: 2rem; color: var(--accent-color); text-align: center }
-.client-card .title { font-size: 1.7rem; font-weight: 600; text-align: center; color: #000;}
+.client-card .title { font-size: 1.7rem; font-weight: 400; text-align: center; color: #000;}
 /* .client-card .description { font-size: 1.4rem; font-weight: 500; color: var(--primary-color); text-align: center; } */
 
 
-/* @media (width < 400px){
+@media (width < 400px){
   .client-card::before{
     content: counter(stepnr);
     color: var(--accent-color);
-    padding-left: 10em;
-    font-size: 10rem;
+    padding-left: 9em;
+    font-size: 10.8rem;
     font-weight: 700;
     overflow: hidden;
-} 
+}
 }
 /* -----------------------------Contact-------------------------- */
 
@@ -463,8 +481,8 @@ nav {
     text-align: center;
     margin: 0 auto;
     padding: 40px 0;
-    font:'Raleway', sans-serif;
-    font-weight: 500;
+    font-family: var(--font);
+    font-weight: 300;
     font-size: 4rem;
     color: #000;
     text-transform: uppercase;
