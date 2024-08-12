@@ -365,7 +365,12 @@ nav {
   }
 }
 
- 
+@media (width < 35000px){
+  .about-title{
+    font-size: 3rem;
+    padding: 0%;
+  }
+}
 
 
 /* -------------------------Clients-------------------------- */
@@ -456,14 +461,12 @@ nav {
 
 
 @media (width < 400px){
+  body{
+    overflow-x: hidden;
+  }
   .client-card::before{
-    content: counter(stepnr);
-    color: var(--accent-color);
-    padding-left: 9em;
-    font-size: 10.8rem;
-    font-weight: 700;
-    overflow: hidden;
-}
+    display: none;
+  }
 }
 /* -----------------------------Contact-------------------------- */
 
