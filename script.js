@@ -1,62 +1,108 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const icon = menuBtn.querySelector("i");
+    // Safe loader for local Lottie library
+    (function loadLottie(){
+      var s = document.createElement('script');
+      s.src = 'assets/js/lottie.min.js'; // place lottie.min.js locally
+      s.async = true;
+      s.onload = init;
+      s.onerror = init; // continue without Lottie
+      document.head.appendChild(s);
+    })();
 
-menuBtn.addEventListener("click", (e) => {
-    navLinks.classList.toggle("open");
+    // IntersectionObserver to reveal cards and sections
+    const io = new IntersectionObserver((entries)=> {
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in-view'); }
+      });
+    }, { threshold: .2 });
 
-    const isOpen = navLinks.classList.contains("open");
-    icon.setAttribute("class", isOpen? "fa-solid fa-xmark" : "fa-solid fa-bars")
-}); 
-
-navLinks.addEventListener("click", (e) => {
-    navLinks.classList.remove("open");
-    icon.setAttribute("class", "fa-solid fa-bars")
+    window.addEventListener('DOMContentLoaded', ()=>{
+  document.querySelectorAll('.card').forEach(el=> io.observe(el));
+  document.querySelectorAll('.client').forEach(el=> io.observe(el)); // NEW
+  document.getElementById('y').textContent = new Date().getFullYear();
 });
 
-const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,
-  };
+    // Initialize Lottie animations when ready
+    function init(){
+      // If lottie failed to load, gracefully skip
+      if(!(window.lottie && document.getElementById('lottie-hero'))) return;
+
+      // Hero animation (place blueprint.json at assets/animations/blueprint.json)
+      window.lottie.loadAnimation({
+        container: document.getElementById('lottie-hero'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/animations/blueprint.json' // replace with your JSON
+      });
+
+      // Optional: play/pause on visibility
+      const hero = document.getElementById('lottie-hero');
+      const vis = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          const anim = hero.__lottie || null;
+          if(!anim) return;
+          if(entry.isIntersecting) anim.play();
+          else anim.pause();
+        });
+      }, { threshold: .1 });
+
+      // attach animation instance for toggling
+      hero.__lottie = window.lottie.getRegisteredAnimations
+        ? window.lottie.getRegisteredAnimations().slice(-1)
+        : null;
+
+      vis.observe(hero);
+    }
+
+    // Simple form handler (client-side)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // basic validation
+      if(!data.name || !data.email || !data.phone || !data.service){
+        alert('Please fill all required fields.');
+        return;
+      }
+      // TODO: replace with real submission (fetch to API/email service)
+      console.log('Contact request:', data);
+      alert('Thanks! Your request has been recorded. The team will get back shortly.');
+      form.reset();
+    });
   
-  ScrollReveal().reveal(".header-img img", {
-    ...scrollRevealOption,
-    origin: "right",
-  });
-  ScrollReveal().reveal(".header-content h2", {
-    ...scrollRevealOption,
-    delay: 500,
-  });
-  ScrollReveal().reveal(".header-content h1", {
-    ...scrollRevealOption,
-    delay: 1000,
-  });
-  ScrollReveal().reveal(".header-content p", {
-    ...scrollRevealOption,
-    delay: 1500,
-  });
-  ScrollReveal().reveal(".header-content .header-btn", {
-    ...scrollRevealOption,
-    delay: 2000,
-  });
-  ScrollReveal().reveal(".header-content .socials", {
-    ...scrollRevealOption,
-    delay: 2500,
-  });
-  ScrollReveal().reveal(".header-bar", {
-    ...scrollRevealOption,
-    delay: 3000,
-  });
+function toggleNav() {
+      var navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('show');
+    }
 
-  ScrollReveal().reveal("#main-client", {
-    ...scrollRevealOption,
-    delay: 1000,
-  });
 
-  document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    
+    // Get the popup
+    var popup = document.getElementById("thankYouPopup");
+
+    // Get the button that opens the popup
+    var btn = document.getElementById("submitBtn");
+
+    // Get the <span> element that closes the popup
+    var span = document.getElementsByClassName("close-btn")[0];
+
+    // When the user clicks the button, open the popup 
+    btn.onclick = function() {
+        popup.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the popup
+    span.onclick = function() {
+        popup.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the popup, close it
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    }
   });
